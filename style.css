@@ -1,0 +1,103 @@
+.tile {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.hp-bar {
+  position: absolute;
+  top: -6px;     /* чуть выше персонажа */
+  left: 4px;
+  width: 42px;
+  height: 5px;
+  background: #333;
+  border: 1px solid #000;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hp-fill {
+  height: 100%;
+  background: limegreen;
+}
+
+.tileE .hp-fill {
+  background: red;
+}
+
+
+#restartBtn {
+    position: absolute;  /* фиксируем позицию над полем */
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10000;  /* ставим выше всех тайлов */
+    display: none;   /* прячем до Game Over */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+#restartBtn:hover {
+    background-color: #0056b3;
+}
+
+body {
+    display: flex;              /* поле и инвентарь в ряд */
+    background: #000;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.field-box {
+    width: 800px;
+    height: 600px;
+    border: 2px solid #444;
+    overflow: hidden;
+    position: relative;
+}
+
+.inventory-box {
+    width: 220px;
+    height: 600px;
+    margin-left: 20px;
+    border: 2px solid #444;
+    padding: 10px;
+    background-color: #111;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inventory-item {
+    width: 60px;                /* квадратная ячейка */
+    height: 80px;
+    background-color: #222;
+    border: 1px solid #555;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.inventory-item img {
+    width: 48px;
+    height: 48px;
+}
+
+.inventory-item span {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ff0;
+    text-align: center;
+}
+
